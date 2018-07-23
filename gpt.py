@@ -13,8 +13,8 @@ for i in range(1,129):
 	if struct.unpack_from("<I", data, 0)[0] == 0:
 		print("=======================================")
 		exit()
-	start = struct.unpack_from("<I", data, 32)[0]
-	last = struct.unpack_from("<I", data, 40)[0]
+	start = struct.unpack_from("<Q", data, 32)[0]
+	last = struct.unpack_from("<Q", data, 40)[0]
 	print("start : ",start)
 	print("last : ",last)
 	
