@@ -15,7 +15,7 @@ def process_image(f,sectors):
                         print("Starting LBA : ", (sectors + struct.unpack_from("<I", table[i], 8)[0])*512)
                         print("size : ", struct.unpack_from("<I", table[i], 12)[0] * 512)
                 if table[i][4] == 5:
-                        return process_image(f,sectors + struct.unpack_from("<I", table[i], 8)[0])
+                        process_image(f,sectors + struct.unpack_from("<I", table[i], 8)[0])
                         
 
 filename = 'mbr_128.dd'
